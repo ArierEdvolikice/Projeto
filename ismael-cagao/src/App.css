@@ -1,0 +1,155 @@
+.App {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  text-align: center;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  height: 115px;
+}
+
+.row > div {
+  padding: 10px;
+  flex: 1;
+}
+
+.row > div img {
+  border-radius: 5px;
+  object-fit: cover;
+  width: 100%;
+  height: 90px;
+}
+
+.details {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.details.expanded {
+  max-height: 1000px; 
+  opacity: 1;
+}
+
+.details-inside {
+  display: flex;
+}
+
+.left-column {
+  flex: 1;
+}
+
+.left-column img {
+  border-radius: 5px;
+  width: 500px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.right-column {
+  flex: 2;
+  padding: 0px 15px 15px 15px;
+}
+
+.right-column h3 {
+  margin-top: 0;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 5px;
+  max-width: 500px;
+  overflow: auto;
+}
+
+.thumbnail.active {
+  opacity: 1;
+  -webkit-opacity: 1; 
+  -moz-opacity: 1;
+}
+.thumbnails img{
+  width: 100%;
+  min-width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.thumbnails img:hover{
+cursor: pointer;
+}
+
+.right-column ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.right-column ul li {
+  margin-bottom: 5px;
+}
+
+.header-row > div {
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.button:hover {
+  color: #555;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button-flat {
+  color: #63A644;
+  font-size: 1.2rem;
+  padding: 5px;
+  background-color: #ecfadc;
+  border-radius: 5px;
+  width: 35px;
+  transition: .2s;
+}
+
+.button-flat:hover {
+  color: #ecfadc;
+  background-color: #63A644;
+}
+
